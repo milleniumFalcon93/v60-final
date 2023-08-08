@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Pour: V-60 Pourover Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Poppins:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+        body {
+            font-family: 'Inconsolata', monospace;
+            color: #555;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-bar {
+            font-family: 'Pacifico';
+            text-decoration-line: underline;
+            background-color: #f9f9f9;
+            padding: 0.75rem;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        .logo {
+            width: 512px;
+            height: 512px;
+            background-color: #f5f5f5;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 8rem; /* Added margin-top to move the content below the taskbar */
+        }
+
+        .timer-container {
+            background-color: #fff;
+            border-radius: 0.75rem;
+            box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .timer-display {
+            font-family: 'Poppins', sans-serif;
+            font-size: 6rem;
+            font-weight: 400;
+        }
+
+        .current-step {
+            font-family: 'Inconsolata';
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .footer {
+            font-size: 0.875rem;
+            color: #777;
+            margin-top: 2rem;
+        }
+
+        .additional-footer {
+            font-size: 0.875rem;
+            color: #777;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        h1, h2 {
+            font-family: 'Inconsolata', monospace;
+            color: #4d4d4d;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .slam-animation {
+            animation: slam 0.4s ease;
+        }
+
+        @keyframes slam {
+            0% {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <h1 class="text-4xl font-bold">VSIXTYFIED</h1>
+    </div>
+    <!-- <div class="logo"></div> -->
+    <div class="container">
+        <div class="timer-container">
+            <div class="timer-display">02:00</div>
+            <div class="current-step slam-animation">Hi there!👋 Press start to begin</div>
+        </div>
+        <div class="buttons">
+            <button id="start-btn" class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg">Start</button>
+            <button id="reset-btn" class="px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg">Reset</button>
+        </div>
+        <!-- <p class="footer">Made with ❤️ for coffee by Chinmay</p> -->
+        <p class="additional-footer">Inspired by James Hoffman V60 single cup technique<br>Made with ❤️ for coffee by Chinmay</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
